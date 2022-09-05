@@ -1,0 +1,14 @@
+{% extends "AppProyecto/padre.html" %}
+{% load static %}
+{% block Titulo %} Busqueda por Comision {% endblock %}
+
+
+
+{% block contenidoQueCambia %}
+<h2>Busqueda de Comision</h2>
+<form action="{% url 'buscar' %}" method="GET">
+    <input type="number" name="comision" id="comision">
+    <input type="submit" value="Buscar">
+</form>
+{{ mensaje }}
+{% endblock %}
