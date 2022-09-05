@@ -1,0 +1,23 @@
+{% extends "AppFulvito/padre.html" %}
+{% load static %}
+{% block Titulo %} LIGAS {% endblock %}
+
+{% block contenidoQueCambia %}
+<h1> Lista de Ligas Creadas </h1>
+
+{% if ligas %}
+<ul>
+    {% for liga in ligas %}
+        <li>Nombre: {{liga.nombre}}</li>
+        <li>Pais: {{liga.pais}}</li>
+        <br>
+    {% endfor %}
+</ul>
+
+{% else %}
+<p>No se encontraron Ligas.</p>
+
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "AppFulvito/padre.html" %}
+{% load static %}
+{% block Titulo %} JUGADORES {% endblock %}
+
+{% block contenidoQueCambia %}
+<h1> Lista de Jugadores Creados </h1>
+
+{% if jugadores %}
+<ul>
+    {% for jugador in jugadores %}
+        <li>Nombre: {{jugador.nombre}}</li>
+        <li>Edad: {{jugador.edad}}</li>
+        <li>Pais: {{jugador.pais}}</li>
+        <li>Equipo: {{jugador.equipo}}</li>
+        <br>
+    {% endfor %}
+</ul>
+
+{% else %}
+<p>No se encontraron Jugadores.</p>
+
+{% endif %}
+
+
+{% endblock %}

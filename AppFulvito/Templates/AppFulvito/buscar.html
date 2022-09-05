@@ -1,0 +1,18 @@
+{% extends "AppFulvito/padre.html" %}
+{% load static %}
+{% block Titulo %} Busqueda por Criterio {% endblock %}
+
+
+
+{% block contenidoQueCambia %}
+<div class="text-center">
+    <h1 class="mb-5">Por qué criterio deseas buscar?</h1>
+<nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+        <a class="btn btn-primary" href="{% url 'busqueda' %}">BUSQUEDA POR NOMBRE</a>
+        <a class="btn btn-primary" href="{% url 'busqueda2' %}">BUSQUEDA POR PAIS</a>
+        <a class="btn btn-primary" href="{% url 'busqueda3' %}">BUSQUEDA POR EQUIPO</a>
+    </div>
+</nav>
+{{ mensaje }}
+{% endblock %}

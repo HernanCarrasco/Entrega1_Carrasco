@@ -1,0 +1,13 @@
+{% extends "AppFulvito/padre.html" %}
+{% load static %}
+{% block Titulo %} Crear Jugador {% endblock %}
+
+
+
+{% block contenidoQueCambia %}
+<form action="{% url 'crear_jugador' %}" method="POST"> {% csrf_token %} 
+    <table> {{ formulario.as_table }} </table>
+    <input type="submit" value="Enviar">
+</form>
+
+{% endblock %}

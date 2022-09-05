@@ -3,7 +3,7 @@ from django import forms
 
 class EquipoForm(forms.Form):
     nombre=forms.CharField(max_length=40)
-    año_fundacion=forms.DateField()
+    año_fundacion=forms.IntegerField()
     nro_titulos=forms.IntegerField()
     pais=forms.CharField(max_length=20)
 

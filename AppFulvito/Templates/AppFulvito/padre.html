@@ -14,23 +14,20 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static 'AppProyecto/css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'AppFulvito/css/styles.css' %}" rel="stylesheet" />
     </head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'inicio' %}">INICIO</a>
-                <a class="btn btn-primary" href="{% url 'crear_curso' %}">CREAR CURSO</a>
-                <a class="btn btn-primary" href="{% url 'cursos' %}">CURSOS</a>
-                <a class="btn btn-primary" href="{% url 'entregables' %}">ENTREGABLES</a>
-                <a class="btn btn-primary" href="{% url 'estudiantes' %}">ESTUDIANTES</a>
-                <a class="btn btn-primary" href="{% url 'familia' %}">FAMILIA</a>
-                <a class="btn btn-primary" href="{% url 'familiar1' %}">FAMILIAR1</a>
-                <a class="btn btn-primary" href="{% url 'familiar2' %}">FAMILIAR2</a>
-                <a class="btn btn-primary" href="{% url 'familiar3' %}">FAMILIAR3</a>
-                <a class="btn btn-primary" href="{% url 'profesores' %}">PROFESORES</a>
-                <a class="btn btn-primary" href="{% url 'busqueda_comision' %}">Buscar por comision</a>
+                <a class="btn btn-primary" href="{% url 'crear_reg' %}"> CREAR REGISTROS</a>
+                <a class="btn btn-primary" href="{% url 'equipos' %}">EQUIPOS</a>
+                <a class="btn btn-primary" href="{% url 'jugadores' %}">JUGADORES</a>
+                <a class="btn btn-primary" href="{% url 'entrenadores' %}">ENTRENADORES</a>
+                <a class="btn btn-primary" href="{% url 'ligas' %}">LIGAS</a>
+                <a class="btn btn-primary" href="{% url 'campeonatos' %}">CAMPEONATOS</a>
+                <a class="btn btn-primary" href="{% url 'buscar' %}">BUSCAR</a>
             </div>
         </nav>
         <!-- Masthead-->

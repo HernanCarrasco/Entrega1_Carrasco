@@ -1,22 +1,82 @@
-{% extends "AppProyecto/padre.html" %}
+{% extends "AppFulvito/padre.html" %}
 {% load static %}
-{% block Titulo %} Resultados de la Busqueda {% endblock %}
+{% block Titulo %} RESULTADOS DE LA BUSQUEDA {% endblock %}
 
 
 
 {% block contenidoQueCambia %}
-<h1> BUSQUEDA DE CURSOS </h1>
-{% if cursos %}
+<h1> Busqueda por {{busqueda}} </h1>
+<u><p>Equipos:</p></u>
+{% if objeto1 %}
 <ul>
-    {% for curso in cursos %}
-        <li> {{curso.nombre}}</li>
-        <li> {{curso.comision}}</li>
+    {% for i in objeto1 %}
+        <li>Nombre: {{i.nombre}}</li>
+        <li>Pais: {{i.pais}}</li>
+        <li>Año de Fundacion: {{i.año_fundacion}}</li>
+        <li>Nro de Titulos: {{i.nro_titulos}}</li>
         <br>
     {% endfor %}
 </ul>
-
 {% else %}
-<p>No se encontraron cursos.</p>
+<p>No se encontraron registros.</p>
 {% endif %}
+
+<u><p>Jugadores:</p></u>
+{% if objeto2 %}
+<ul>
+    {% for i in objeto2 %}
+        <li>Nombre: {{i.nombre}}</li>
+        <li>Pais: {{i.pais}}</li>
+        <li>Edad: {{i.edad}}</li>
+        <li>Equipo: {{i.equipo}}</li>
+        <br>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No se encontraron registros.</p>
+{% endif %}
+
+<u><p>Entrenadores:</p></u>
+{% if objeto3 %}
+<ul>
+    {% for i in objeto3 %}
+        <li>Nombre: {{i.nombre}}</li>
+        <li>Pais: {{i.pais}}</li>
+        <li>Edad: {{i.edad}}</li>
+        <li>Equipo: {{i.equipo}}</li>
+        <br>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No se encontraron registros.</p>
+{% endif %}
+
+<u><p>Ligas:</p></u>
+{% if objeto4 %}
+<ul>
+    {% for i in objeto4 %}
+        <li>Nombre: {{i.nombre}}</li>
+        <li>Pais: {{i.pais}}</li>
+        <br>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No se encontraron registros.</p>
+{% endif %}
+
+<u><p>Campeonatos:</p></u>
+{% if objeto5 %}
+<ul>
+    {% for i in objeto5 %}
+        <li>Nombre: {{i.nombre}}</li>
+        <li>Formato: {{i.formato}}</li>
+        <li>Nro de Equipos: {{i.nro_equipos}}</li>
+        <br>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No se encontraron registros.</p>
+{% endif %}
+
 
 {% endblock %}

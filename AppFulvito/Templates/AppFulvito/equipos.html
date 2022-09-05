@@ -1,0 +1,25 @@
+{% extends "AppFulvito/padre.html" %}
+{% load static %}
+{% block Titulo %} EQUIPOS {% endblock %}
+
+{% block contenidoQueCambia %}
+<h1> Lista de Equipos Creados </h1>
+
+{% if equipos %}
+<ul>
+    {% for equipo in equipos %}
+        <li>Nombre: {{equipo.nombre}}</li>
+        <li>Pais: {{equipo.pais}}</li>
+        <li>Año de Fundación: {{equipo.año_fundacion}}</li>
+        <li>Numero de Títulos: {{equipo.nro_titulos}}</li>
+        <br>
+    {% endfor %}
+</ul>
+
+{% else %}
+<p>No se encontraron Equipos.</p>
+
+{% endif %}
+
+
+{% endblock %}

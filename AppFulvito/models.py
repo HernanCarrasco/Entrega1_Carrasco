@@ -2,7 +2,7 @@ from django.db import models
 
 class Equipo(models.Model):
     nombre=models.CharField(max_length=40)
-    año_fundacion=models.DateField()
+    año_fundacion=models.IntegerField()
     nro_titulos=models.IntegerField()
     pais=models.CharField(max_length=20)
 

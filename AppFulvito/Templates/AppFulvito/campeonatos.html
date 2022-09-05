@@ -1,0 +1,24 @@
+{% extends "AppFulvito/padre.html" %}
+{% load static %}
+{% block Titulo %} CAMPEONATOS {% endblock %}
+
+{% block contenidoQueCambia %}
+<h1> Lista de Campeonatos Creados </h1>
+
+{% if campeonatos %}
+<ul>
+    {% for campeonato in campeonatos %}
+        <li>Nombre: {{campeonato.nombre}}</li>
+        <li>Formato: {{campeonato.formato}}</li>
+        <li>Numero de equipos: {{campeonato.nro_equipos}}</li>
+        <br>
+    {% endfor %}
+</ul>
+
+{% else %}
+<p>No se encontraron Campeonatos.</p>
+
+{% endif %}
+
+
+{% endblock %}

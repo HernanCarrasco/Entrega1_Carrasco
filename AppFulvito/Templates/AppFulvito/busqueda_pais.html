@@ -1,0 +1,14 @@
+{% extends "AppFulvito/padre.html" %}
+{% load static %}
+{% block Titulo %} Busqueda {% endblock %}
+
+
+
+{% block contenidoQueCambia %}
+<h2>Busqueda por Pais</h2>
+<form action="{% url 'busqueda_pais' %}" method="GET">
+    <input type="text" name="pais" id="pais">
+    <input type="submit" value="Buscar">
+</form>
+{{ mensaje }}
+{% endblock %}
