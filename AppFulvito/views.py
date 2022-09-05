@@ -56,7 +56,7 @@ def crear_curso(request):
 
     if request.method == "POST":
 
-        formulario_user = CursoForm(request.POST)
+        formulario_user = EquipoForm(request.POST)
 
         if formulario_user.is_valid():
             info=formulario_user.cleaned_data
@@ -66,7 +66,7 @@ def crear_curso(request):
             curso.save()
             return render (request, "AppProyecto/inicio.html", {'mensaje': "Curso Creado!"})
     else:
-        formulario_user=CursoForm()
+        formulario_user=EquipoForm()
         return render (request, "AppProyecto/crear_curso.html", {"formulario":formulario_user})
 
 def busqueda_comision(request):
