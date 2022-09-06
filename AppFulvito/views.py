@@ -131,7 +131,7 @@ def crear_campeonato(request):
         else:
             return render (request, "AppFulvito/crear_campeonato.html", {"formulario":formulario_user, 'mensaje': "Error en los datos"}) 
     else:
-        formulario_user=JugadorForm()
+        formulario_user=CampeonatoForm()
         return render (request, "AppFulvito/crear_campeonato.html", {"formulario":formulario_user})
 
 def campeonatos(request):
